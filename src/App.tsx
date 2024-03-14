@@ -4,6 +4,7 @@ import "./App.css";
 import { Button, Modal } from "flowbite-react";
 import CardComponent from "./components/CardComponent";
 import FormCreateProduct from "./components/FormCreateProduct";
+import LoadingComponent from "./components/LoadingComponent";
 
 type Status = "idle" | "loading" | "success" | "error";
 type Product = {
@@ -36,7 +37,10 @@ function App() {
   if (status === "loading") {
     return (
       <div className="h-screen grid place-content-center">
-        <h1 className="text-6xl">Loading</h1>
+        <h1 className="text-6xl">
+          {" "}
+          <LoadingComponent />{" "}
+        </h1>
       </div>
     );
   }
